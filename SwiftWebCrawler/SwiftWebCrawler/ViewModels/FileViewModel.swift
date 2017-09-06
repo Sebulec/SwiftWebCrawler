@@ -16,6 +16,15 @@ struct FileViewModel {
     var id: Int
     var filename: String
     var state: String
+    var url: String
+    
+    init(id: Int, file: File) {
+        self.id = id
+        self.filename = file.url.components(separatedBy: "/").last!
+        state = "0%"
+        self.url = file.url
+    }
+    
     
     func getValueForIdentifier(identifier: String) throws -> String {
         switch identifier {

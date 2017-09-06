@@ -10,15 +10,30 @@ import Foundation
 import Alamofire
 
 class Downloader {
-    class func downloadAndLoadToDocumentDirectory(source: String, progressCallback:@escaping (Double) -> Void) {
-//        let destination = createDirectoryIfNotExists(name: "WebCrawler")
-//        Alamofire.download(source, to: destination)
-//            .downloadProgress { progress in
-//                progressCallback(progress.fractionCompleted)
-//                print("Progress: \(progress.fractionCompleted)")
-//        }
+    static let destination = getDestination()
+    
+    class func downloadAndLoadToDocumentDirectory(source: String, progressCallback: @escaping (Double) -> Void) {
+        Alamofire.download(source, to: destination)
+            .downloadProgress { progress in
+                progressCallback(progress.fractionCompleted)
+        }
     }
     
+    class func getHtmlStringFrom(source: String, completionCallback: @escaping (String) -> Void) {
+        Alamofire.request(source).responseString { response in
+            if let html = response.result.value {
+                completionCallback(html)
+            }
+        }
+    }
     
+    class func getDestination() -> DownloadRequest.DownloadFileDestination {
+        let destination: DownloadRequest.DownloadFileDestination = { (tempURL: URL, response: HTTPURLResponse) in
+            var directoryURL = FileDirectoryManager.getDirectoryPath()
+            directoryURL.appendPathComponent(response.suggestedFilename!)
+            return (directoryURL, [.removePreviousFile])
+        }
+        return destination
+    }
     
 }

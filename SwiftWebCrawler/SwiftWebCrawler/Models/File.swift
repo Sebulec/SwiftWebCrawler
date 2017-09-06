@@ -9,6 +9,5 @@
 import Foundation
 
 struct File {
-    var filename: String
-    var size: Int64
+    var url: String
 }

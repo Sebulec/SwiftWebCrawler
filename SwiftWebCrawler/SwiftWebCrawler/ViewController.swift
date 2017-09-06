@@ -8,44 +8,34 @@
 
 import Cocoa
 
-class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
-
+class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource, FileDisplayProtocol {
+    
     @IBOutlet weak var tableView: NSTableView!
     var files: [FileViewModel] = []
     var i = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViews()
-        setupTestData()
-        tableView.reloadData()
-        startTimer()
-        FileDirectoryManager.clearDirectoryWithName(name: "WebCrawler")
-//        Downloader.downloadAndLoadToDocumentDirectory(source: "https://www.diki.pl/images/diki/diki_logo.svg") { (progress) in
-        
-//        }
+        setupParserAndStartCrawling()
     }
     
-    private func setupTestData() {
-        let lastValue = i + 3
-        while i < lastValue {
-            let fileViewModel = FileViewModel(id: i, filename: "File\(i)", state: "\(i*10)%")
-            files.append(fileViewModel)
+    func setupParserAndStartCrawling() {
+        // for edit
+        let parser = HTMLParser(source: "https://videoconverter.wondershare.com/player/mov-player.html", lookingFor: .mov)
+        // end for edit
+        parser.delegate = self
+        parser.startCrawling()
+    }
+    
+    func displayFiles(files: [File]) {
+        self.files.removeAll()
+        var i = 1
+        for file in files {
+            let fileViewModel = FileViewModel(id: i, file: file)
+            self.files.append(fileViewModel)
             i += 1
         }
-    }
-    
-    private func setupViews() {
-
-    }
-    var gameTimer: Timer?
-    private func startTimer() {
-        gameTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: true)
-    }
-    
-    func runTimedCode() {
-        setupTestData()
-        tableView.reloadData()
+        self.tableView.reloadData()
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
@@ -57,14 +47,12 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         let identifier = (tableColumn?.identifier)!
         let cell = tableView.make(withIdentifier: (identifier), owner: self) as? NSTableCellView
         cell?.textField?.stringValue = try! item.getValueForIdentifier(identifier: identifier)
+        if identifier == "state" {
+            Downloader.downloadAndLoadToDocumentDirectory(source: item.url, progressCallback: { (progress) in
+                cell?.textField?.stringValue = "\((Int)(progress * 100))%"
+            })
+        }
         return cell
     }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
-
 }
 
