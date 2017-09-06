@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7E7D5FAE1C2914E5D5CE4E67 /* Pods_SwiftWebCrawler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2306DFCC282459316D074D1 /* Pods_SwiftWebCrawler.framework */; };
+		90070A421F5EABBF008F514E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90070A411F5EABBF008F514E /* AppDelegate.swift */; };
+		90070A441F5EABBF008F514E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90070A431F5EABBF008F514E /* ViewController.swift */; };
+		90070A491F5EABBF008F514E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90070A471F5EABBF008F514E /* Main.storyboard */; };
+		90D121CA1F5EADB600E0423D /* WebCrawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D121C91F5EADB600E0423D /* WebCrawler.swift */; };
+		90D121CE1F5EAE0400E0423D /* CrawlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D121CD1F5EAE0400E0423D /* CrawlerProtocol.swift */; };
+		90D973691F5F115D008DAE7E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D973681F5F115D008DAE7E /* File.swift */; };
+		90D9736C1F5F11D7008DAE7E /* FileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D9736B1F5F11D7008DAE7E /* FileViewModel.swift */; };
+		90D973711F5F2C54008DAE7E /* FileDirectoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D973701F5F2C54008DAE7E /* FileDirectoryManager.swift */; };
+		90D973731F5F2CC7008DAE7E /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D973721F5F2CC7008DAE7E /* Downloader.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		90070A3E1F5EABBF008F514E /* SwiftWebCrawler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftWebCrawler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90070A411F5EABBF008F514E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		90070A431F5EABBF008F514E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		90070A481F5EABBF008F514E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		90070A4A1F5EABBF008F514E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90D121C91F5EADB600E0423D /* WebCrawler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebCrawler.swift; path = Models/WebCrawler.swift; sourceTree = "<group>"; };
+		90D121CD1F5EAE0400E0423D /* CrawlerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CrawlerProtocol.swift; path = Protocols/CrawlerProtocol.swift; sourceTree = "<group>"; };
+		90D973681F5F115D008DAE7E /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = File.swift; path = Models/File.swift; sourceTree = "<group>"; };
+		90D9736B1F5F11D7008DAE7E /* FileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileViewModel.swift; path = ViewModels/FileViewModel.swift; sourceTree = "<group>"; };
+		90D973701F5F2C54008DAE7E /* FileDirectoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileDirectoryManager.swift; path = Backend/FileDirectoryManager.swift; sourceTree = "<group>"; };
+		90D973721F5F2CC7008DAE7E /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Downloader.swift; path = Backend/Downloader.swift; sourceTree = "<group>"; };
+		B50854D0D0FE1970EE042B00 /* Pods-SwiftWebCrawler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWebCrawler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWebCrawler/Pods-SwiftWebCrawler.debug.xcconfig"; sourceTree = "<group>"; };
+		C2306DFCC282459316D074D1 /* Pods_SwiftWebCrawler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftWebCrawler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1909279326D79875E2B7F7B /* Pods-SwiftWebCrawler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWebCrawler.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWebCrawler/Pods-SwiftWebCrawler.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90070A3B1F5EABBF008F514E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E7D5FAE1C2914E5D5CE4E67 /* Pods_SwiftWebCrawler.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		243FE9CC6DCD5987475064D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2306DFCC282459316D074D1 /* Pods_SwiftWebCrawler.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90070A351F5EABBF008F514E = {
+			isa = PBXGroup;
+			children = (
+				90070A401F5EABBF008F514E /* SwiftWebCrawler */,
+				90070A3F1F5EABBF008F514E /* Products */,
+				F4302FCCF6B93F93114A1EFA /* Pods */,
+				243FE9CC6DCD5987475064D2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		90070A3F1F5EABBF008F514E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90070A3E1F5EABBF008F514E /* SwiftWebCrawler.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90070A401F5EABBF008F514E /* SwiftWebCrawler */ = {
+			isa = PBXGroup;
+			children = (
+				90D9736F1F5F18B7008DAE7E /* Backend */,
+				90D9736A1F5F11BB008DAE7E /* ViewModels */,
+				90D121CC1F5EADF000E0423D /* Protocols */,
+				90070A411F5EABBF008F514E /* AppDelegate.swift */,
+				90070A431F5EABBF008F514E /* ViewController.swift */,
+				90070A471F5EABBF008F514E /* Main.storyboard */,
+				90070A4A1F5EABBF008F514E /* Info.plist */,
+				90D121CB1F5EADCE00E0423D /* Models */,
+			);
+			path = SwiftWebCrawler;
+			sourceTree = "<group>";
+		};
+		90D121CB1F5EADCE00E0423D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				90D121C91F5EADB600E0423D /* WebCrawler.swift */,
+				90D973681F5F115D008DAE7E /* File.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		90D121CC1F5EADF000E0423D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				90D121CD1F5EAE0400E0423D /* CrawlerProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		90D9736A1F5F11BB008DAE7E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				90D9736B1F5F11D7008DAE7E /* FileViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		90D9736F1F5F18B7008DAE7E /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				90D973721F5F2CC7008DAE7E /* Downloader.swift */,
+				90D973701F5F2C54008DAE7E /* FileDirectoryManager.swift */,
+			);
+			name = Backend;
+			sourceTree = "<group>";
+		};
+		F4302FCCF6B93F93114A1EFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B50854D0D0FE1970EE042B00 /* Pods-SwiftWebCrawler.debug.xcconfig */,
+				E1909279326D79875E2B7F7B /* Pods-SwiftWebCrawler.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90070A3D1F5EABBF008F514E /* SwiftWebCrawler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90070A4D1F5EABBF008F514E /* Build configuration list for PBXNativeTarget "SwiftWebCrawler" */;
+			buildPhases = (
+				D651C2223DFDDF987BF77C86 /* [CP] Check Pods Manifest.lock */,
+				90070A3A1F5EABBF008F514E /* Sources */,
+				90070A3B1F5EABBF008F514E /* Frameworks */,
+				90070A3C1F5EABBF008F514E /* Resources */,
+				ECFE18C1045064271706A882 /* [CP] Embed Pods Frameworks */,
+				F576AF606BDD71F9F77F0A5E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftWebCrawler;
+			productName = SwiftWebCrawler;
+			productReference = 90070A3E1F5EABBF008F514E /* SwiftWebCrawler.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90070A361F5EABBF008F514E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Sebastian Kotarski";
+				TargetAttributes = {
+					90070A3D1F5EABBF008F514E = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = KDCQ2PRYNK;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 90070A391F5EABBF008F514E /* Build configuration list for PBXProject "SwiftWebCrawler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 90070A351F5EABBF008F514E;
+			productRefGroup = 90070A3F1F5EABBF008F514E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90070A3D1F5EABBF008F514E /* SwiftWebCrawler */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		90070A3C1F5EABBF008F514E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90070A491F5EABBF008F514E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D651C2223DFDDF987BF77C86 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ECFE18C1045064271706A882 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftWebCrawler/Pods-SwiftWebCrawler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F576AF606BDD71F9F77F0A5E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftWebCrawler/Pods-SwiftWebCrawler-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90070A3A1F5EABBF008F514E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90D973691F5F115D008DAE7E /* File.swift in Sources */,
+				90070A441F5EABBF008F514E /* ViewController.swift in Sources */,
+				90D973731F5F2CC7008DAE7E /* Downloader.swift in Sources */,
+				90070A421F5EABBF008F514E /* AppDelegate.swift in Sources */,
+				90D121CE1F5EAE0400E0423D /* CrawlerProtocol.swift in Sources */,
+				90D973711F5F2C54008DAE7E /* FileDirectoryManager.swift in Sources */,
+				90D9736C1F5F11D7008DAE7E /* FileViewModel.swift in Sources */,
+				90D121CA1F5EADB600E0423D /* WebCrawler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		90070A471F5EABBF008F514E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90070A481F5EABBF008F514E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		90070A4B1F5EABBF008F514E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		90070A4C1F5EABBF008F514E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		90070A4E1F5EABBF008F514E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B50854D0D0FE1970EE042B00 /* Pods-SwiftWebCrawler.debug.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KDCQ2PRYNK;
+				INFOPLIST_FILE = SwiftWebCrawler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pwr.SwiftWebCrawler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		90070A4F1F5EABBF008F514E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1909279326D79875E2B7F7B /* Pods-SwiftWebCrawler.release.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KDCQ2PRYNK;
+				INFOPLIST_FILE = SwiftWebCrawler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pwr.SwiftWebCrawler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90070A391F5EABBF008F514E /* Build configuration list for PBXProject "SwiftWebCrawler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90070A4B1F5EABBF008F514E /* Debug */,
+				90070A4C1F5EABBF008F514E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90070A4D1F5EABBF008F514E /* Build configuration list for PBXNativeTarget "SwiftWebCrawler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90070A4E1F5EABBF008F514E /* Debug */,
+				90070A4F1F5EABBF008F514E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90070A361F5EABBF008F514E /* Project object */;
+}
